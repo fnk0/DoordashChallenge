@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Discover</string>
+    <string name="ratings_format">%1$s - %2$s ratings</string>
+    <string name="retry">Retry</string>
+</resources>

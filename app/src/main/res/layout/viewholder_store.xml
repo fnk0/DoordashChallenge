@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/small_padding"
+    android:layout_marginTop="@dimen/xsmall_padding"
+    android:layout_marginEnd="@dimen/small_padding"
+    android:layout_marginBottom="@dimen/xsmall_padding"
+    android:clickable="true"
+    app:cardElevation="@dimen/xsmall_padding">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/store_item_header_image"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/store_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_padding"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_marginEnd="@dimen/small_padding"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/store_item_header_image"
+            tools:text="Restaurant Name" />
+
+        <TextView
+            android:id="@+id/store_item_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_padding"
+            android:layout_marginEnd="@dimen/small_padding"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@+id/store_item_delivery_time"
+            app:layout_constraintStart_toStartOf="@+id/store_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/store_item_name"
+            tools:text="$$ - Chinese, Soup, Sushi, Fried Stuff" />
+
+        <TextView
+            android:id="@+id/store_item_delivery_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/store_item_details"
+            app:layout_constraintEnd_toEndOf="@+id/store_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/store_item_name"
+            tools:text="22 mins" />
+
+        <TextView
+            android:id="@+id/store_item_delivery_ratings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_padding"
+            android:layout_marginEnd="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/small_padding"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="@dimen/xsmall_padding"
+            app:drawableStartCompat="@drawable/ic_baseline_star"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/store_item_delivery_price"
+            app:layout_constraintStart_toStartOf="@+id/store_item_details"
+            app:layout_constraintTop_toBottomOf="@+id/store_item_details"
+            tools:text="4.7 - 37 ratings" />
+
+        <TextView
+            android:id="@+id/store_item_delivery_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xsmall_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/store_item_delivery_ratings"
+            app:layout_constraintEnd_toEndOf="@+id/store_item_delivery_time"
+            app:layout_constraintTop_toBottomOf="@+id/store_item_delivery_time"
+            tools:text="$3.99" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
